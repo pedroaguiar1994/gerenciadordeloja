@@ -7,7 +7,7 @@ class LoginValidators{
       if(email.contains("@")){
         sink.add(email);
       }else{
-        sink.addError("Insira um e-mail válido");
+        sink.addError("Insira um e-mail válido!");
       }
     }
   );

@@ -28,14 +28,14 @@ class ImageSourceSheet extends StatelessWidget {
           FlatButton(
             child: Text("Camera"),
             onPressed: ()async{
-              File image = await ImagePicker.pickVideo(source:ImageSource.camera);
+              File image = await ImagePicker.pickImage(source:ImageSource.camera);
               imageSelected(image);
             },
           ),
           FlatButton(
             child: Text("Galeria"),
             onPressed: ()async{
-              File image = await ImagePicker.pickVideo(source:ImageSource.gallery);
+              File image = await ImagePicker.pickImage(source:ImageSource.gallery);
               imageSelected(image);
             },
           )

@@ -16,7 +16,7 @@ class ProductValidator{
   String validatePrice(String text){
     double price = double.tryParse(text);
     if(price != null ){
-      if(!text.contains(".") || text.split(".")[1].length !=2)
+      if(!text.contains(".") || text.split(".")[1].length != 2)
         return "Utilize 2 casas decimais";
     }else{
       return " Preço invalido";

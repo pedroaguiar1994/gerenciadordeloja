@@ -7,6 +7,7 @@ import 'package:gerente_loja/tabs/product_tab.dart';
 import 'package:gerente_loja/tabs/users_tab.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();

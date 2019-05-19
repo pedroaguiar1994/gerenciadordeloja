@@ -33,6 +33,7 @@ dependencies:
   bloc_pattern: ^1.5.2
   shimmer: ^1.0.0
   firebase_core: ^0.3.4
+  flutter_launcher_icons: ^0.7.0
 
 
 dev_dependencies:
@@ -81,3 +82,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "icons/team.png"

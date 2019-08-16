@@ -45,6 +45,9 @@ class ProductBloc extends BlocBase{
   void saveImages(List images){
     unsavedData["images"] = images;
   }
+  void saveSizes(List sizes){
+    unsavedData["sizes"] = sizes;
+  }
   Future<bool> saveProduct()async{
     _loadingController.add(true);
     try{
@@ -80,6 +83,9 @@ class ProductBloc extends BlocBase{
 
       unsavedData["images"][i] = downloadUrl;
     }
+  }
+  void deleteProduct(){
+    product.reference.delete();
   }
 
   @override

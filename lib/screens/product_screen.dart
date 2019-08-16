@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gerente_loja/blocs/product_bloc.dart';
 import 'package:gerente_loja/validators/product_validator.dart';
 import 'package:gerente_loja/widgets/images_widget.dart';
+import 'package:gerente_loja/widgets/product_sizes.dart';
 
 class ProductScreen extends StatefulWidget {
   
@@ -67,7 +68,10 @@ class _ProductScreenState extends State<ProductScreen> with ProductValidator{
             builder: (context, snapshot) {
               return IconButton(
                 icon:  Icon(Icons.remove),
-                onPressed: snapshot.data ? null : saveProduct,
+                onPressed: snapshot.data ? null : (){
+                  _productBloc.deleteProduct();
+                  Navigator.of(context).pop();
+                },
                 );
                }
               );
@@ -132,6 +136,22 @@ class _ProductScreenState extends State<ProductScreen> with ProductValidator{
                       keyboardType: TextInputType.numberWithOptions(decimal: true),
                       onSaved: _productBloc.savePrice,
                       validator: validatePrice,
+                    ),
+                    SizedBox(height: 16,),
+                    Text
+                      ("Caracteristicas",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 16
+                    ),
+                    ),
+                    ProductsSizes(
+                      context: context,
+                      initialValue: snapshot.data["sizes"],
+                      onSaved: _productBloc.saveSizes,
+                      validator: (s){
+                        if(s.isEmpty) return "Adicione uma caracterisca do produto";
+                      },
                     )
                   ],
                 );
@@ -173,8 +193,6 @@ class _ProductScreenState extends State<ProductScreen> with ProductValidator{
            backgroundColor:Colors.redAccent,
         )
       );
-        
-
     }
   }
 }

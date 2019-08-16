@@ -86,4 +86,4 @@ flutter:
 flutter_icons:
   android: true
   ios: true
-  image_path: "icons/team.png"
+  image_path: "icons/settings.png" 

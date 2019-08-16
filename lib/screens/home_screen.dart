@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
           overlayColor: Colors.black,
           children: [
             SpeedDialChild(
-              child: Icon(Icons.arrow_downward, color: Colors.red),
+              child: Icon(Icons.arrow_downward, color: Colors.blue),
               backgroundColor: Colors.white,
               label: "Concluidos Abaixo",
               labelStyle: TextStyle(fontSize: 16 ),

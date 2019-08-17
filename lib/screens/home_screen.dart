@@ -71,7 +71,11 @@ class _HomeScreenState extends State<HomeScreen> {
              BottomNavigationBarItem(
               icon: Icon(Icons.list),
               title: Text("Produtos")
-            )
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              title: Text("Ajustes") // Novo Botao de configuraçao do ajustes do aplicativo
+            ),
           ]
           ),
       ),
